@@ -1,0 +1,103 @@
+// Typography Sizes //
+
+$size-10: 1rem;
+$size-12: 1.2rem;
+$size-14: 1.4rem;
+$size-16: 1.6rem;
+$size-18: 1.8rem;
+$size-20: 2rem;
+$size-24: 2.4rem;
+$size-30: 3rem;
+$size-36: 3.6rem;
+$size-44: 4.4rem;
+$size-52: 5.2rem;
+$size-62: 6.2rem;
+$size-74: 7.4rem;
+$size-86: 8.6rem;
+$size-98: 9.8rem;
+
+// Color Palette //
+
+// Primary Color
+$color-pl: #96f2d7;
+$color-pr: #20c997;
+$color-pd: #099268;
+
+// Secondary Color
+$color-sl: #99e9f2;
+$color-se: #3bc9db;
+$color-sd: #1098ad;
+
+// Utility Colors
+$color-success: #22c55e;
+$color-info: #3b82f6;
+$color-warning: #eab308;
+$color-danger: #ef4444;
+
+// Gray
+$white: #ffffff;
+$black: #000000;
+
+$gray-50: #f8f9fa;
+$gray-100: #f1f3f5;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Shadows //
+
+$shadow-s: 0 1px 3px 0 rgba($black, 0.1), 0 1px 2px -1px rgba($black, 0.1);
+$shadow-m: 0 4px 6px -1px rgba($black, 0.1), 0 2px 4px -2px rgba($black, 0.1);
+$shadow-l: 0 10px 15px -3px rgba($black, 0.1), 0 4px 6px -4px rgba($black, 0.1);
+
+// Border Radius //
+
+$border-rad-s: 0.8rem;
+$border-rad-m: 1.2rem;
+$border-rad-l: 1.6rem;
+
+$form-border-width: 2px;
+$form-border-radius: 4px;
+
+// Spacing //
+
+$space-2: 0.2rem;
+$space-4: 0.4rem;
+$space-8: 0.8rem;
+$space-12: 1.2rem;
+$space-16: 1.6rem;
+$space-24: 2.4rem;
+$space-32: 3.2rem;
+$space-48: 4.8rem;
+$space-64: 6.4rem;
+$space-80: 8rem;
+$space-96: 9.6rem;
+$space-128: 12.8rem;
+$space-160: 16rem;
+
+// Padding //
+
+$padding-xs: $space-4 $space-12;
+$padding-sm: $space-8 $space-24;
+$padding-md: $space-12 $space-32;
+$padding-lg: $space-16 $space-48;
+$padding-xl: $space-24 $space-64;
+
+// Grid //
+
+$grid-width: 132rem;
+$gutter-col: $space-64; // horizontal margin/padding
+$gutter-row: $space-96; // vertical margin/padding
+$flex-col-width: 92%; // Flex Columns: 100% = no space between columns
+$card-gutter-row: $space-48;
+
+// Transition //
+
+$transition-s: all 0.2s linear;
+$transition-m: all 0.3s linear;
+$transition-l: all 0.5s linear;

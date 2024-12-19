@@ -1,0 +1,132 @@
+// Imports //
+
+@use "../abstracts/" as *;
+
+// Codes //
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; // Set 1rem = 10px (10/16*100)
+}
+body {
+  box-sizing: border-box;
+}
+
+/*
+
+Font sizes (px):- 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+Spacing system (px):- 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 / 160
+
+*/
+
+:root {
+  // Typography Sizes //
+  --size-10: #{$size-10};
+  --size-12: #{$size-12};
+  --size-14: #{$size-14};
+  --size-16: #{$size-16};
+  --size-18: #{$size-18};
+  --size-20: #{$size-20};
+  --size-24: #{$size-24};
+  --size-30: #{$size-30};
+  --size-36: #{$size-36};
+  --size-44: #{$size-44};
+  --size-52: #{$size-52};
+  --size-62: #{$size-62};
+  --size-74: #{$size-74};
+  --size-86: #{$size-86};
+  --size-98: #{$size-98};
+
+  // Color Palette //
+
+  // Primary Color
+  --color-pl: #{$color-pl};
+  --color-pr: #{$color-pr};
+  --color-pd: #{$color-pd};
+
+  // Secondary Color
+  --color-sl: #{$color-sl};
+  --color-se: #{$color-se};
+  --color-sd: #{$color-sd};
+
+  // Utility Colors
+  --color-success: #{$color-success};
+  --color-info: #{$color-info};
+  --color-warning: #{$color-warning};
+  --color-danger: #{$color-danger};
+
+  // Gray
+  --white: #{$white};
+  --black: #{$black};
+
+  --gray-50: #{$gray-50};
+  --gray-100: #{$gray-100};
+  --gray-200: #{$gray-200};
+  --gray-300: #{$gray-300};
+  --gray-400: #{$gray-400};
+  --gray-500: #{$gray-500};
+  --gray-600: #{$gray-600};
+  --gray-700: #{$gray-700};
+  --gray-800: #{$gray-800};
+  --gray-900: #{$gray-900};
+
+  // Shadows //
+
+  --shadow-s: #{$shadow-s};
+  --shadow-m: #{$shadow-m};
+  --shadow-l: #{$shadow-l};
+
+  // Border Radius //
+
+  --border-rad-s: #{$border-rad-s};
+  --border-rad-m: #{$border-rad-m};
+  --border-rad-l: #{$border-rad-l};
+
+  --form-border-width: #{$form-border-width};
+  --form-border-radius: #{$form-border-radius};
+
+  // Spacing //
+
+  --space-2: #{$space-2};
+  --space-4: #{$space-4};
+  --space-8: #{$space-8};
+  --space-12: #{$space-12};
+  --space-16: #{$space-16};
+  --space-24: #{$space-24};
+  --space-32: #{$space-32};
+  --space-48: #{$space-48};
+  --space-64: #{$space-64};
+  --space-80: #{$space-80};
+  --space-96: #{$space-96};
+  --space-128: #{$space-128};
+  --space-160: #{$space-160};
+
+  // Padding //
+
+  --padding-xs: #{$padding-xs};
+  --padding-sm: #{$padding-sm};
+  --padding-md: #{$padding-md};
+  --padding-lg: #{$padding-lg};
+  --padding-xl: #{$padding-xl};
+
+  // Grid //
+
+  --grid-width: #{$grid-width};
+  --gutter-col: #{$gutter-col}; // horizontal margin/padding
+  --gutter-row: #{$gutter-row}; // vertical margin/padding
+  --flex-col-width: #{$flex-col-width}; // Flex Columns: 100% = no space between columns
+  --card-gutter-row: #{$card-gutter-row};
+
+  // Transition //
+
+  --transition-s: #{$transition-s};
+  --transition-m: #{$transition-m};
+  --transition-l: #{$transition-l};
+}

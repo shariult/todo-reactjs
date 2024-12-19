@@ -1,0 +1,207 @@
+// Imports //
+
+@use "../abstracts/" as *;
+
+// Codes //
+
+.navbar {
+  width: 100%;
+  background: var(--gray-50);
+  color: var(--gray-900);
+  position: sticky;
+  top: 0;
+  z-index: 91;
+  &__nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @include responsive(1440) {
+      padding: 0 var(--space-24);
+    }
+  }
+  &__logo {
+    max-height: var(--size-30);
+    margin: var(--space-12) 0;
+    &-img {
+      display: inline-block;
+      height: 100%;
+    }
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    list-style-position: inside;
+    @include responsive(800) {
+      flex-flow: column nowrap;
+      width: 100%;
+      background: var(--gray-900);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      opacity: 0;
+      transform-origin: top center;
+      transform: scaleY(0);
+      transition: var(--transition-s);
+    }
+  }
+
+  &__item {
+    position: relative;
+    @include responsive(800) {
+      padding: var(--padding-sm);
+    }
+  }
+  &__link,
+  &__link:link,
+  &__link:visited {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: var(--padding-sm);
+    border: none;
+    outline: 2px dashed transparent;
+    color: inherit;
+    font-size: var(--size-16);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-s);
+    @include responsive(800) {
+      width: 100%;
+    }
+    &:hover {
+      background: var(--color-pd);
+      color: var(--gray-50);
+    }
+    &:active,
+    &:focus {
+      background: var(--gray-50);
+      outline: 2px dashed var(--gray-50);
+      color: var(--gray-900);
+    }
+  }
+  &__active,
+  &__active:link,
+  &__active:visited {
+    background-color: var(--gray-300);
+    border-bottom: 2px solid var(--gray-900);
+  }
+
+  // Navbar Toggle //
+  &__toggle {
+    align-self: center;
+    display: none;
+    height: 5rem;
+    width: 5rem;
+    margin: var(--space-12) 0;
+    background: var(--gray-800);
+    border-radius: var(--border-rad-s);
+    cursor: pointer;
+    @include responsive(800) {
+      @include flexCenter;
+    }
+  }
+  &__toggle--open {
+    @include responsive(800) {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+  &__toggle-icon {
+    display: block;
+    position: relative;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: var(--gray-50);
+      display: inline-block;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: var(--transition-s);
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+  &__toggle--open + &__toggle &__toggle-icon {
+    background-color: transparent;
+  }
+  &__toggle--open + &__toggle &__toggle-icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &__toggle--open + &__toggle &__toggle-icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  // Navbar Dropdown Menu //
+  &__checkbox {
+    display: none;
+  }
+  &__checkbox:checked ~ &__list--sub {
+    height: initial;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  &__label-img {
+    display: inline-block;
+    width: var(--size-36);
+    height: var(--size-36);
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 var(--space-12);
+    font-size: var(--size-18);
+  }
+  &__label::after {
+    content: "\276F";
+    transform: rotate(90deg);
+    font-size: var(--size-12);
+    transition: var(--transition-s);
+  }
+  &__checkbox:checked ~ &__label::after {
+    transform: rotate(-90deg);
+  }
+
+  &__list--sub {
+    height: 0;
+    min-width: 20rem;
+    flex-direction: column;
+    background-color: var(--gray-100);
+    box-shadow: var(--shadow-s);
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: var(--transition-s);
+    @include responsive(800) {
+      z-index: 93;
+      width: 100%;
+    }
+  }
+  &__text {
+    text-align: center;
+    padding: var(--padding-sm);
+    margin-top: var(--space-32);
+    color: var(--gray-700);
+  }
+
+  // Navbar Mobile Only Menu
+  &__mobile-only {
+    display: none;
+    @include responsive(800) {
+      display: block;
+    }
+  }
+}

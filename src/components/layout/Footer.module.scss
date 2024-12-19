@@ -1,0 +1,6 @@
+@use "../../assets/scss/abstracts/" as *;
+
+.footer {
+  background-color: var(--gray-50);
+  padding: var(--space-32) 0;
+}

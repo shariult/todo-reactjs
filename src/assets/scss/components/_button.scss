@@ -1,0 +1,73 @@
+// Imports //
+
+@use "../abstracts/" as *;
+
+// Codes //
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    border: none;
+    border-radius: var(--border-rad-s);
+    font-size: var(--size-16);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-s);
+    outline: 2px dashed transparent;
+  }
+  &:hover {
+    color: var(--color-se);
+  }
+  &:active,
+  &:focus {
+    outline: 2px dashed var(--gray-900);
+    outline-offset: 2px;
+  }
+
+  // Colors
+  &--light {
+    color: var(--gray-50);
+  }
+
+  // Primary Button
+  &--primary,
+  &--primary:link,
+  &--primary:visited {
+    padding: var(--padding-sm);
+    background-color: var(--color-pr);
+    color: var(--gray-50);
+  }
+  &--primary:hover {
+    background-color: var(--color-pd);
+    color: var(--gray-50);
+  }
+
+  // Secondary Button
+  &--danger,
+  &--danger:link,
+  &--danger:visited {
+    padding: var(--padding-sm);
+    background-color: var(--color-danger);
+    color: var(--gray-50);
+  }
+  &--danger:hover {
+    background-color: var(--color-warning);
+    color: var(--gray-50);
+  }
+
+  // Sizes
+  &--md,
+  &--md:link,
+  &--md:visited {
+    font-size: var(--size-18);
+    padding: var(--padding-md);
+  }
+  &--lg,
+  &--lg:link,
+  &--lg:visited {
+    font-size: var(--size-18);
+    padding: var(--padding-lg);
+  }
+}

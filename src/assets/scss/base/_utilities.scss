@@ -1,0 +1,63 @@
+// Imports //
+
+@use "sass:math";
+@use "../abstracts/" as *;
+
+// Codes //
+
+$spaceAmounts: (12, 24, 48, 64);
+@each $space in $spaceAmounts {
+  // Margins
+  .m-#{$space} {
+    margin: #{math.div($space, 10)}rem;
+  }
+  .mx-#{$space} {
+    margin-right: #{math.div($space, 10)}rem;
+    margin-left: #{math.div($space, 10)}rem;
+  }
+  .my-#{$space} {
+    margin-top: #{math.div($space, 10)}rem;
+    margin-bottom: #{math.div($space, 10)}rem;
+  }
+  .mt-#{$space} {
+    margin-top: #{math.div($space, 10)}rem;
+  }
+  .mr-#{$space} {
+    margin-right: #{math.div($space, 10)}rem;
+  }
+  .mb-#{$space} {
+    margin-bottom: #{math.div($space, 10)}rem;
+  }
+  .ml-#{$space} {
+    margin-left: #{math.div($space, 10)}rem;
+  }
+
+  // Paddings
+  .p-#{$space} {
+    padding: #{math.div($space, 10)}rem;
+  }
+  .px-#{$space} {
+    padding-right: #{math.div($space, 10)}rem;
+    padding-left: #{math.div($space, 10)}rem;
+  }
+  .py-#{$space} {
+    padding-top: #{math.div($space, 10)}rem;
+    padding-bottom: #{math.div($space, 10)}rem;
+  }
+  .pt-#{$space} {
+    padding-top: #{math.div($space, 10)}rem;
+  }
+  .pr-#{$space} {
+    padding-right: #{math.div($space, 10)}rem;
+  }
+  .pb-#{$space} {
+    padding-bottom: #{math.div($space, 10)}rem;
+  }
+  .pl-#{$space} {
+    padding-left: #{math.div($space, 10)}rem;
+  }
+}
+
+.text--center {
+  text-align: center;
+}
